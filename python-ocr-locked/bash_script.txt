@@ -1,0 +1,6 @@
+docker run --rm -v ${PWD}:/io python:3.10-slim bash -c "
+    apt-get update && apt-get install -y gcc build-essential &&
+    pip install cython setuptools wheel &&
+    cd /io &&
+    python setup.py bdist_wheel
+"
